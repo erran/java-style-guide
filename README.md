@@ -5,6 +5,7 @@ style guide's.
 
 ## Table of Contents
 * [Source Code Layout](#source-code-layout)
+* [Classes](#classes)
 
 ## Source Code Layout
 * Use three **spaces** (soft tabs) per indentation level.
@@ -33,3 +34,37 @@ Java community both of which are considered good - trailing braces (Option A) an
     if (isEven()) {
     }
     ```
+
+# Classes
+* Use a consistent structure in your class definitions.
+
+ ```java
+ public class Car
+ {
+    // public constructors
+    public Car(String make, String model)
+    {
+       m_make = make;
+       m_model = model;
+    }
+
+    // public methods
+    public String toString()
+    {
+       return getMakeString() + " model: " + m_model;
+    }
+
+    // protected/private methods
+    private String getMakeString()
+    {
+       return "make: " + m_make;
+    }
+
+    // protected/private members
+    private String m_make;
+    private String m_model;
+
+    // protected/private static members
+    private static Logger ms_logger; 
+ }
+ ```
